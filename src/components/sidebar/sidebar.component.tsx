@@ -12,14 +12,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import useLocalStorage from '../../hooks/localstorage.hook';
-import { TextField } from '@mui/material';
 
 const drawerWidth = 240;
 
+
 export default function PermanentDrawerLeft() {
 
-  const {value, setLSkey} = useLocalStorage("name")
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -89,13 +87,11 @@ export default function PermanentDrawerLeft() {
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
-        <Toolbar />
+        {/* <Toolbar /> */}
         
-        <TextField onBlur={($e) => setLSkey($e.target.value)} />
 
-        <Typography variant='body1'>{value}</Typography>
-        
       </Box>
+
     </Box>
   );
 }

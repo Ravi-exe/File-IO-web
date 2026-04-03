@@ -6,6 +6,7 @@ import {
 import SigninPage from "../pages/signin/signin.page"; "../pages/signin/signin.page";
 import Sidebar from "../components/sidebar/sidebar.component";
 import SignupPage from "../pages/signup/signup.page";
+import Dashboard from "../pages/dashboard/dashboard.page";
 
 
 export default function AppRouter() {
@@ -25,7 +26,7 @@ export default function AppRouter() {
     },
     {
       path: "/Dashboard",
-      element: <Sidebar />,
+      element: <Dashboard />,
     },
   ]);
 
